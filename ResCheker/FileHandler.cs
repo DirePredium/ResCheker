@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ResCheker
 {
-    class FileHandler : FileHandlerAbstruct
+    class FileHandlerJson : IFileHandler
     {
         public void SaveRes<T>(string DBFilePath, T objectForSave)
         {

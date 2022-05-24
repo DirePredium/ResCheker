@@ -14,11 +14,11 @@ namespace ResCheker
     public partial class Form1 : Form
     {
 
-        static FileHandler fileHandler;
+        static FileHandlerJson fileHandler;
         public Form1()
         {
             InitializeComponent();
-            fileHandler = new FileHandler();
+            fileHandler = new FileHandlerJson();
         }
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -29,10 +29,10 @@ namespace ResCheker
             if (savefile1.ShowDialog() == DialogResult.OK)
             {
                 TestResMonitor monitorStruct = new TestResMonitor();
-                monitorStruct.CpuPer = 33;
-                monitorStruct.MemPer = 30;
-                monitorStruct.GpuPer = 90;
-                monitorStruct.FpsCou = 60;
+                monitorStruct.CpuPer = 56786;
+                monitorStruct.MemPer = 568560;
+                monitorStruct.GpuPer = 967560;
+                monitorStruct.FpsCou = 656555;
                 fileHandler.SaveRes<TestResMonitor>(savefile1.FileName, monitorStruct);
             }
         }
@@ -42,7 +42,7 @@ namespace ResCheker
             if (openfile.ShowDialog() == DialogResult.OK)
             {
                 TestResMonitor testRM = fileHandler.ReadRes<TestResMonitor>(openfile.FileName);
-                textBox1.Text = testRM.CpuPer + " " + testRM.FpsCou + " " + testRM.MemPer+"!!!!";
+                textBox1.Text = testRM.CpuPer + " " + testRM.FpsCou + " " + testRM.MemPer+" " + testRM.FpsCou + " ";
             }
         }
     }
