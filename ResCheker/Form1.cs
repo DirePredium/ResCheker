@@ -22,26 +22,26 @@ namespace ResCheker
         }
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog savefile1 = new SaveFileDialog();
-            savefile1.Filter = "dat files |*.json";
-            savefile1.FilterIndex = 2;
-            savefile1.RestoreDirectory = true;
-            if (savefile1.ShowDialog() == DialogResult.OK)
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "dat files |*.json";
+            saveFileDialog.FilterIndex = 2;
+            saveFileDialog.RestoreDirectory = true;
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 TestResMonitor monitorStruct = new TestResMonitor();
                 monitorStruct.CpuPer = 56786;
                 monitorStruct.MemPer = 568560;
                 monitorStruct.GpuPer = 967560;
                 monitorStruct.FpsCou = 656555;
-                fileHandler.SaveRes<TestResMonitor>(savefile1.FileName, monitorStruct);
+                fileHandler.SaveRes<TestResMonitor>(saveFileDialog.FileName, monitorStruct);
             }
         }
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openfile = new OpenFileDialog();
-            if (openfile.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                TestResMonitor testRM = fileHandler.ReadRes<TestResMonitor>(openfile.FileName);
+                TestResMonitor testRM = fileHandler.ReadRes<TestResMonitor>(openFileDialog.FileName);
                 textBox1.Text = testRM.CpuPer + " " + testRM.FpsCou + " " + testRM.MemPer+" " + testRM.FpsCou + " ";
             }
         }
