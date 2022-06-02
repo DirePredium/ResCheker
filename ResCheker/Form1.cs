@@ -15,6 +15,7 @@ namespace ResCheker
     {
 
         static FileHandlerJson fileHandler;
+        public static string SetValueForText1 = "";
         public Form1()
         {
             InitializeComponent();
@@ -41,9 +42,17 @@ namespace ResCheker
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                TestResMonitor testRM = fileHandler.ReadRes<TestResMonitor>(openFileDialog.FileName);
-                textBox1.Text = testRM.CpuPer + " " + testRM.FpsCou + " " + testRM.MemPer+" " + testRM.FpsCou + " ";
+                TestResMonitor jsonResMonitor = fileHandler.ReadRes<TestResMonitor>(openFileDialog.FileName);
+                JsonForm jsonForm = new JsonForm(jsonResMonitor);
+                jsonForm.Show();
+                //textBox1.Text = testRM.CpuPer + " " + testRM.FpsCou + " " + testRM.MemPer+" " + testRM.FpsCou + " ";
             }
+        }
+
+        private void отослатьСообщиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpForm helpForm = new HelpForm();
+            helpForm.Show();
         }
     }
 }

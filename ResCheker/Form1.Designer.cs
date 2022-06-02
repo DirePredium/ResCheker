@@ -33,8 +33,9 @@ namespace ResCheker
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отослатьСообщиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,16 +62,31 @@ namespace ResCheker
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
+            // 
+            // помощьToolStripMenuItem
+            // 
+            this.помощьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отослатьСообщиеToolStripMenuItem});
+            this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
+            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.помощьToolStripMenuItem.Text = "Помощь";
+            // 
+            // отослатьСообщиеToolStripMenuItem
+            // 
+            this.отослатьСообщиеToolStripMenuItem.Name = "отослатьСообщиеToolStripMenuItem";
+            this.отослатьСообщиеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.отослатьСообщиеToolStripMenuItem.Text = "Отослать сообщие";
+            this.отослатьСообщиеToolStripMenuItem.Click += new System.EventHandler(this.отослатьСообщиеToolStripMenuItem_Click);
             // 
             // textBox1
             // 
@@ -78,12 +94,6 @@ namespace ResCheker
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(612, 23);
             this.textBox1.TabIndex = 1;
-            // 
-            // помощьToolStripMenuItem
-            // 
-            this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
-            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.помощьToolStripMenuItem.Text = "Помощь";
             // 
             // Form1
             // 
@@ -110,6 +120,7 @@ namespace ResCheker
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem помощьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отослатьСообщиеToolStripMenuItem;
     }
 }
 
