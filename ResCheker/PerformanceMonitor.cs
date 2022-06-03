@@ -43,32 +43,33 @@ namespace ResCheker
             var gpuCounters = new List<PerformanceCounter>();
             var result = 0f;
 
-            foreach (string counterName in counterNames)
-            {
-                if (counterName.EndsWith("engtype_3D"))
+              foreach (string counterName in counterNames)
                 {
-                    foreach (PerformanceCounter counter in category.GetCounters(counterName))
+                    if (counterName.EndsWith("engtype_3D"))
                     {
-                        if (counter.CounterName == "Utilization Percentage")
+                        foreach (PerformanceCounter counter in category.GetCounters(counterName))
                         {
-                            gpuCounters.Add(counter);
+                            if (counter.CounterName == "Utilization Percentage")
+                            {
+                                gpuCounters.Add(counter);
+                            }
                         }
                     }
                 }
-            }
 
-            gpuCounters.ForEach(x =>
-            {
-                _ = x.NextValue();
-            });
+                gpuCounters.ForEach(x =>
+                {
+                    _ = x.NextValue();
+                });
 
 
-            gpuCounters.ForEach(x =>
-            {
-                result += x.NextValue();
-            });
+                gpuCounters.ForEach(x =>
+                {
+                    result += x.NextValue();
+                });
 
-            this.perfomance.GpuPerformance = (int)result;
+                this.perfomance.GpuPerformance = (int)result;
+            
         }
 
         private void SetFpsCounter()
