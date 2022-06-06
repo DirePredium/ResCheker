@@ -192,6 +192,7 @@ namespace ResCheker
         private void выйтиToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void metroLink1_Click(object sender, EventArgs e)
@@ -205,9 +206,9 @@ namespace ResCheker
             saveFileDialog.Filter = "dat files |*.json";
             saveFileDialog.FilterIndex = 2;
             saveFileDialog.RestoreDirectory = true;
+            saveFileDialog.FileName = DateTime.Now.ToString().Replace(':','-');
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-               // PerfomanceStruct perfomanceStruct = new PerfomanceStruct();
                 fileHandler.SaveRes<PerfomanceStruct>(saveFileDialog.FileName, perfomance);
             }
         }
@@ -221,6 +222,24 @@ namespace ResCheker
                 jsonOpen jsonForm = new jsonOpen(perfomanceStruct);
                 jsonForm.Show();
             }
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+                Hide();
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            WindowState = FormWindowState.Normal;
+        }
+
+        private void помощьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpForm helpForm = new HelpForm();
+            helpForm.Show();
         }
     }
 

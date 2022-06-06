@@ -56,6 +56,8 @@ namespace ResCheker
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.выйтиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -171,7 +173,7 @@ namespace ResCheker
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(57, 216);
+            this.metroLabel7.Location = new System.Drawing.Point(401, 220);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(26, 19);
             this.metroLabel7.TabIndex = 9;
@@ -254,33 +256,34 @@ namespace ResCheker
             this.сохранитьToolStripMenuItem,
             this.открытьToolStripMenuItem,
             this.выйтиToolStripMenuItem,
-            this.выйтиToolStripMenuItem1});
+            this.выйтиToolStripMenuItem1,
+            this.помощьToolStripMenuItem});
             this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(181, 98);
+            this.metroContextMenu1.Size = new System.Drawing.Size(181, 120);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
             // выйтиToolStripMenuItem
             // 
             this.выйтиToolStripMenuItem.Name = "выйтиToolStripMenuItem";
-            this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(177, 6);
+            this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(130, 6);
             // 
             // выйтиToolStripMenuItem1
             // 
             this.выйтиToolStripMenuItem1.Name = "выйтиToolStripMenuItem1";
-            this.выйтиToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.выйтиToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
             this.выйтиToolStripMenuItem1.Text = "Выйти";
             this.выйтиToolStripMenuItem1.Click += new System.EventHandler(this.выйтиToolStripMenuItem1_Click);
             // 
@@ -288,12 +291,27 @@ namespace ResCheker
             // 
             this.metroLink1.Image = ((System.Drawing.Image)(resources.GetObject("metroLink1.Image")));
             this.metroLink1.ImageSize = 32;
-            this.metroLink1.Location = new System.Drawing.Point(910, 18);
+            this.metroLink1.Location = new System.Drawing.Point(157, 19);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.Size = new System.Drawing.Size(43, 39);
             this.metroLink1.TabIndex = 2;
             this.metroLink1.UseSelectable = true;
             this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipTitle = "Title";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "ResChecker";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // помощьToolStripMenuItem
+            // 
+            this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
+            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.помощьToolStripMenuItem.Text = "Помощь";
+            this.помощьToolStripMenuItem.Click += new System.EventHandler(this.помощьToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -304,7 +322,9 @@ namespace ResCheker
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "ResChecker";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -341,6 +361,8 @@ namespace ResCheker
         private System.Windows.Forms.ToolStripSeparator выйтиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выйтиToolStripMenuItem1;
         private MetroFramework.Controls.MetroLink metroLink1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ToolStripMenuItem помощьToolStripMenuItem;
     }
 }
 
