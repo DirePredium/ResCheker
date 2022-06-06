@@ -29,6 +29,7 @@ namespace ResCheker
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -36,18 +37,18 @@ namespace ResCheker
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroProgressBar3 = new MetroFramework.Controls.MetroProgressBar();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroProgressBar2 = new MetroFramework.Controls.MetroProgressBar();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -70,7 +71,7 @@ namespace ResCheker
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(940, 487);
+            this.tabPage1.Size = new System.Drawing.Size(940, 531);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Характеристики";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -125,12 +126,10 @@ namespace ResCheker
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.metroLabel10);
-            this.tabPage2.Controls.Add(this.metroLabel9);
-            this.tabPage2.Controls.Add(this.metroLabel8);
+            this.tabPage2.Controls.Add(this.metroLabel5);
+            this.tabPage2.Controls.Add(this.metroProgressBar3);
             this.tabPage2.Controls.Add(this.metroLabel7);
             this.tabPage2.Controls.Add(this.metroLabel6);
-            this.tabPage2.Controls.Add(this.metroLabel5);
             this.tabPage2.Controls.Add(this.metroLabel3);
             this.tabPage2.Controls.Add(this.metroProgressBar2);
             this.tabPage2.Controls.Add(this.metroLabel4);
@@ -145,30 +144,39 @@ namespace ResCheker
             this.tabPage2.Text = "Загруженность";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // metroLabel1
+            // metroLabel5
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(7, 21);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(77, 19);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Процессор";
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(48, 153);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(35, 19);
+            this.metroLabel5.TabIndex = 11;
+            this.metroLabel5.Text = "GPU";
             // 
-            // metroProgressBar1
+            // metroProgressBar3
             // 
-            this.metroProgressBar1.Location = new System.Drawing.Point(94, 9);
-            this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(724, 45);
-            this.metroProgressBar1.TabIndex = 2;
+            this.metroProgressBar3.Location = new System.Drawing.Point(94, 142);
+            this.metroProgressBar3.Name = "metroProgressBar3";
+            this.metroProgressBar3.Size = new System.Drawing.Size(724, 45);
+            this.metroProgressBar3.TabIndex = 10;
             // 
-            // metroLabel2
+            // metroLabel7
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(824, 21);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(20, 19);
-            this.metroLabel2.TabIndex = 3;
-            this.metroLabel2.Text = "%";
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(57, 216);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(26, 19);
+            this.metroLabel7.TabIndex = 9;
+            this.metroLabel7.Text = "fps";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(824, 153);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(20, 19);
+            this.metroLabel6.TabIndex = 8;
+            this.metroLabel6.Text = "%";
             // 
             // metroLabel3
             // 
@@ -191,85 +199,34 @@ namespace ResCheker
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(48, 87);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(38, 19);
             this.metroLabel4.TabIndex = 4;
-            this.metroLabel4.Text = "ОЗУ";
+            this.metroLabel4.Text = "RAM";
             // 
-            // metroLabel5
+            // metroLabel2
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(7, 158);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(94, 19);
-            this.metroLabel5.TabIndex = 7;
-            this.metroLabel5.Text = "Используется:";
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(824, 21);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(20, 19);
+            this.metroLabel2.TabIndex = 3;
+            this.metroLabel2.Text = "%";
             // 
-            // metroLabel6
+            // metroProgressBar1
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(126, 158);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(30, 19);
-            this.metroLabel6.TabIndex = 8;
-            this.metroLabel6.Text = "000";
+            this.metroProgressBar1.Location = new System.Drawing.Point(94, 9);
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroProgressBar1.Size = new System.Drawing.Size(724, 45);
+            this.metroProgressBar1.TabIndex = 2;
             // 
-            // metroLabel7
+            // metroLabel1
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(126, 188);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(30, 19);
-            this.metroLabel7.TabIndex = 9;
-            this.metroLabel7.Text = "000";
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(28, 188);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(70, 19);
-            this.metroLabel8.TabIndex = 10;
-            this.metroLabel8.Text = "Доступно:";
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(126, 219);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(30, 19);
-            this.metroLabel9.TabIndex = 11;
-            this.metroLabel9.Text = "000";
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(10, 219);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(91, 19);
-            this.metroLabel10.TabIndex = 12;
-            this.metroLabel10.Text = "Установлено:";
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(37, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "_";
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(48, 21);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(35, 19);
+            this.metroLabel1.TabIndex = 0;
+            this.metroLabel1.Text = "CPU";
             // 
             // timer1
             // 
@@ -277,43 +234,10 @@ namespace ResCheker
             this.timer1.Interval = 800;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(37, 80);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "_";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(37, 125);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "_";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(37, 167);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 24);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "_";
-            // 
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 1;
+            this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
@@ -331,10 +255,6 @@ namespace ResCheker
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
-            this.Leave += new System.EventHandler(this.Form1_Leave);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
 
         #endregion
@@ -346,18 +266,18 @@ namespace ResCheker
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TabPage tabPage2;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar2;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar3;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }
 

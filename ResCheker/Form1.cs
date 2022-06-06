@@ -170,6 +170,23 @@ namespace ResCheker
         {
             comboBox1.SelectedIndex = 0;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.monitor.StartResCounting();
+
+            metroProgressBar1.Value = perfomance.CpuPerformance;
+            metroProgressBar2.Value = perfomance.MemPerformance;
+            metroProgressBar3.Value = perfomance.GpuPerformance;
+            metroLabel2.Text = perfomance.CpuPerformance + " " + "%";
+            metroLabel3.Text = perfomance.MemPerformance + " " + "%";
+            metroLabel6.Text = perfomance.GpuPerformance + " " + "%";
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            this.monitor.StartFPSCounting();
+            metroLabel7.Text = "FPS" + " " + perfomance.FpsCounter;
+        }
     }
 
 }

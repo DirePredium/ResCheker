@@ -88,14 +88,28 @@ namespace ResCheker
 
         public void StartResCounting()
         {
-            this.SetCpuPerformance();
-            this.SetMemPerformance();
-            this.SetGpuPerformance();
+            try
+            {
+                this.SetCpuPerformance();
+                this.SetMemPerformance();
+                this.SetGpuPerformance();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Произошла ошибка мониторинга. Error: " + e.Message);
+            }
         }
 
         public void StartFPSCounting()
         {
-            this.SetFpsCounter();
+            try
+            {
+                this.SetFpsCounter();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Произошла ошибка мониторинга. Error: " + e.Message);
+            }
         }
     }
 }
