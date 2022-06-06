@@ -18,11 +18,12 @@ namespace ResCheker
     {
         static PerfomanceStruct perfomance = new PerfomanceStruct();
         PerformanceMonitor monitor = new PerformanceMonitor(perfomance);
-
+        static FileHandlerJson fileHandler;
 
         public Form1()
         {
             InitializeComponent();
+            fileHandler = new FileHandlerJson();
         }
 
         private void GetHardWareInfo(string key, ListView list)
@@ -186,6 +187,40 @@ namespace ResCheker
         {
             this.monitor.StartFPSCounting();
             metroLabel7.Text = "FPS" + " " + perfomance.FpsCounter;
+        }
+
+        private void выйтиToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            metroContextMenu1.Show(metroLink1, 0 , metroLink1.Height);
+        }
+
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "dat files |*.json";
+            saveFileDialog.FilterIndex = 2;
+            saveFileDialog.RestoreDirectory = true;
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+               // PerfomanceStruct perfomanceStruct = new PerfomanceStruct();
+                fileHandler.SaveRes<PerfomanceStruct>(saveFileDialog.FileName, perfomance);
+            }
+        }
+
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                PerfomanceStruct perfomanceStruct = fileHandler.ReadRes<PerfomanceStruct>(openFileDialog.FileName);
+                jsonOpen jsonForm = new jsonOpen(perfomanceStruct);
+                jsonForm.Show();
+            }
         }
     }
 
