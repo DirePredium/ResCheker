@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +16,10 @@ namespace ResCheker
 {
     public partial class Form1 : MetroForm
     {
+        static PerfomanceStruct perfomance = new PerfomanceStruct();
+        PerformanceMonitor monitor = new PerformanceMonitor(perfomance);
+
+
         public Form1()
         {
             InitializeComponent();
@@ -165,4 +171,5 @@ namespace ResCheker
             comboBox1.SelectedIndex = 0;
         }
     }
+
 }

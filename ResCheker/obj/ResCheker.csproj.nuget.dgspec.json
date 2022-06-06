@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Документы\\Моя папка\\Photoshop,PaintToolSai\\Hello World!\\ReCheker\\ResCheker\\ResCheker\\ResCheker.csproj": {}
+    "D:\\Other\\Storage\\Prog\\Other\\OOP\\Monitor\\ResCheker\\ResCheker.csproj": {}
   },
   "projects": {
-    "D:\\Документы\\Моя папка\\Photoshop,PaintToolSai\\Hello World!\\ReCheker\\ResCheker\\ResCheker\\ResCheker.csproj": {
+    "D:\\Other\\Storage\\Prog\\Other\\OOP\\Monitor\\ResCheker\\ResCheker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Документы\\Моя папка\\Photoshop,PaintToolSai\\Hello World!\\ReCheker\\ResCheker\\ResCheker\\ResCheker.csproj",
+        "projectUniqueName": "D:\\Other\\Storage\\Prog\\Other\\OOP\\Monitor\\ResCheker\\ResCheker.csproj",
         "projectName": "ResCheker",
-        "projectPath": "D:\\Документы\\Моя папка\\Photoshop,PaintToolSai\\Hello World!\\ReCheker\\ResCheker\\ResCheker\\ResCheker.csproj",
-        "packagesPath": "C:\\Users\\Михаил\\.nuget\\packages\\",
-        "outputPath": "D:\\Документы\\Моя папка\\Photoshop,PaintToolSai\\Hello World!\\ReCheker\\ResCheker\\ResCheker\\obj\\",
+        "projectPath": "D:\\Other\\Storage\\Prog\\Other\\OOP\\Monitor\\ResCheker\\ResCheker.csproj",
+        "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
+        "outputPath": "D:\\Other\\Storage\\Prog\\Other\\OOP\\Monitor\\ResCheker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Документы\\Моя папка\\Photoshop,PaintToolSai\\vs\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Михаил\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,16 +43,6 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "dependencies": {
-            "MetroModernUI": {
-              "target": "Package",
-              "version": "[1.4.0, )"
-            },
-            "System.Management": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -64,16 +53,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -82,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
